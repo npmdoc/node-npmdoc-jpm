@@ -1,0 +1,1323 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/mozilla-jetpack/jpm">jpm (v1.3.1)</a>
+</h1>
+<h4>Jetpack Mechanic utilities for creating, testing, running and packaging Mozilla Jetpack Addons</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.jpm">module jpm</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">jpm.</span>cmd</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">jpm.</span>profile</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">jpm.</span>rdf</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">jpm.</span>sign</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">jpm.</span>utils</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.jpm.cmd">module jpm.cmd</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jpm.cmd.isEmptyCommand">
+            function <span class="apidocSignatureSpan">jpm.cmd.</span>isEmptyCommand
+            <span class="apidocSignatureSpan">(program)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jpm.cmd.prepare">
+            function <span class="apidocSignatureSpan">jpm.cmd.</span>prepare
+            <span class="apidocSignatureSpan">(mode, program, actionCallback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jpm.cmd.validateProgram">
+            function <span class="apidocSignatureSpan">jpm.cmd.</span>validateProgram
+            <span class="apidocSignatureSpan">(program)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.jpm.profile">module jpm.profile</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jpm.profile.addExtension">
+            function <span class="apidocSignatureSpan">jpm.profile.</span>addExtension
+            <span class="apidocSignatureSpan">(profile, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jpm.profile.addPrefs">
+            function <span class="apidocSignatureSpan">jpm.profile.</span>addPrefs
+            <span class="apidocSignatureSpan">(profile, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jpm.profile.copyProfile">
+            function <span class="apidocSignatureSpan">jpm.profile.</span>copyProfile
+            <span class="apidocSignatureSpan">(profile)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jpm.profile.createProfile">
+            function <span class="apidocSignatureSpan">jpm.profile.</span>createProfile
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jpm.profile.isProfileName">
+            function <span class="apidocSignatureSpan">jpm.profile.</span>isProfileName
+            <span class="apidocSignatureSpan">(profile)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jpm.profile.makeProfile">
+            function <span class="apidocSignatureSpan">jpm.profile.</span>makeProfile
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jpm.profile.reuseProfile">
+            function <span class="apidocSignatureSpan">jpm.profile.</span>reuseProfile
+            <span class="apidocSignatureSpan">(profile)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.jpm.rdf">module jpm.rdf</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jpm.rdf.createRDF">
+            function <span class="apidocSignatureSpan">jpm.rdf.</span>createRDF
+            <span class="apidocSignatureSpan">(manifest, needsBootstrapJS)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jpm.rdf.createUpdateRDF">
+            function <span class="apidocSignatureSpan">jpm.rdf.</span>createUpdateRDF
+            <span class="apidocSignatureSpan">(manifest)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.jpm.sign">module jpm.sign</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jpm.sign.sign">
+            function <span class="apidocSignatureSpan">jpm.</span>sign
+            <span class="apidocSignatureSpan">(options, config)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jpm.sign.getXpiInfoForSigning">
+            function <span class="apidocSignatureSpan">jpm.sign.</span>getXpiInfoForSigning
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jpm.sign.signCmd">
+            function <span class="apidocSignatureSpan">jpm.sign.</span>signCmd
+            <span class="apidocSignatureSpan">(program, options, config)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.jpm.utils">module jpm.utils</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jpm.utils.extractXPI">
+            function <span class="apidocSignatureSpan">jpm.utils.</span>extractXPI
+            <span class="apidocSignatureSpan">(xpiPath)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jpm.utils.getManifest">
+            function <span class="apidocSignatureSpan">jpm.utils.</span>getManifest
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jpm.utils.getXpiInfo">
+            function <span class="apidocSignatureSpan">jpm.utils.</span>getXpiInfo
+            <span class="apidocSignatureSpan">(xpiPath)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jpm.utils.getXpiInfoFromInstallRdf">
+            function <span class="apidocSignatureSpan">jpm.utils.</span>getXpiInfoFromInstallRdf
+            <span class="apidocSignatureSpan">(installRdf)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jpm.utils.getXpiInfoFromManifest">
+            function <span class="apidocSignatureSpan">jpm.utils.</span>getXpiInfoFromManifest
+            <span class="apidocSignatureSpan">(manifest)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">jpm.utils.</span>console</span>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.jpm" id="apidoc.module.jpm">module jpm</a></h1>
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.jpm.cmd" id="apidoc.module.jpm.cmd">module jpm.cmd</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.jpm.cmd.isEmptyCommand" id="apidoc.element.jpm.cmd.isEmptyCommand">
+        function <span class="apidocSignatureSpan">jpm.cmd.</span>isEmptyCommand
+        <span class="apidocSignatureSpan">(program)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isEmptyCommand(program) {
+  if (!program.args.length) {
+    return true;
+  }
+  if (!program.args.filter(function(a) {
+    return typeof a === "object";
+  }).length) {
+    return true;
+  }
+  return false;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jpm.cmd.prepare" id="apidoc.element.jpm.cmd.prepare">
+        function <span class="apidocSignatureSpan">jpm.cmd.</span>prepare
+        <span class="apidocSignatureSpan">(mode, program, actionCallback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function prepare(mode, program, actionCallback) {
+  return function(commanderOptions) {
+    return utils.getManifest({
+      addonDir: program.addonDir
+    }).then(function(manifest) {
+      validateProgram(program);
+      console.log("Starting jpm " + mode + " on " +
+                  (manifest.title || manifest.name));
+      return actionCallback(manifest, commanderOptions);
+    });
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jpm.cmd.validateProgram" id="apidoc.element.jpm.cmd.validateProgram">
+        function <span class="apidocSignatureSpan">jpm.cmd.</span>validateProgram
+        <span class="apidocSignatureSpan">(program)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function validateProgram(program) {
+  Object.keys(program).filter(function(option) {
+    return ~DEBUG_VALUES.indexOf(option);
+  }).forEach(function(option) {
+    if (program.verbose) {
+      console.log(typeof program[option] !== "boolean" ?
+        (option + " set to " + program[option]) :
+        (option + " set"));
+    }
+    if (program.overload &amp;&amp; (!process.env.JETPACK_ROOT &amp;&amp;
+                             typeof program.overload === "boolean")) {
+      console.warn(
+        "`overload` flag specified, but no `JETPACK_ROOT` environment " +
+          "variable set. Using built in Firefox SDK instead.");
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+exports.sign = sign;
+
+function signCmd(program, options, config) {
+config = _.assign({
+  systemProcess: process,
+}, config);
+return when.promise(function(resolve, reject) {
+  resolve(cmd.<span class="apidocCodeKeywordSpan">validateProgram</span>(program));
+}).then(function() {
+  return sign(_.assign({}, options, program), config);
+}).then(function(result) {
+  logger.log(result.success ? "SUCCESS" : "FAIL");
+  config.systemProcess.exit(result.success ? 0 : 1);
+}).catch(function(err) {
+  logger.error("FAIL");
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.jpm.profile" id="apidoc.module.jpm.profile">module jpm.profile</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.jpm.profile.addExtension" id="apidoc.element.jpm.profile.addExtension">
+        function <span class="apidocSignatureSpan">jpm.profile.</span>addExtension
+        <span class="apidocSignatureSpan">(profile, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function addExtension(profile, options) {
+  return when.promise(function(resolve, reject) {
+    if (!options.xpi) {
+      resolve(profile);
+      return;
+    }
+
+    profile.addExtension(options.xpi, function() {
+      resolve(profile);
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+function addExtension(profile, options) {
+  return when.promise(function(resolve, reject) {
+    if (!options.xpi) {
+      resolve(profile);
+      return;
+    }
+
+    profile.<span class="apidocCodeKeywordSpan">addExtension</span>(options.xpi, function() {
+      resolve(profile);
+    });
+  });
+}
+exports.addExtension = addExtension;
+
+function convertProfileNameToPath(options) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jpm.profile.addPrefs" id="apidoc.element.jpm.profile.addPrefs">
+        function <span class="apidocSignatureSpan">jpm.profile.</span>addPrefs
+        <span class="apidocSignatureSpan">(profile, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function addPrefs(profile, options) {
+  var userPrefs = options.prefs || {};
+
+  return when.promise(function(resolve, reject) {
+    Object.keys(userPrefs).forEach(function(key) {
+      profile.setPreference(key, userPrefs[key]);
+    });
+    profile.updatePreferences();
+    resolve(profile);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jpm.profile.copyProfile" id="apidoc.element.jpm.profile.copyProfile">
+        function <span class="apidocSignatureSpan">jpm.profile.</span>copyProfile
+        <span class="apidocSignatureSpan">(profile)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function copyProfile(profile) {
+  return when.resolve(new FirefoxProfile(profile));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jpm.profile.createProfile" id="apidoc.element.jpm.profile.createProfile">
+        function <span class="apidocSignatureSpan">jpm.profile.</span>createProfile
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createProfile(options) {
+  options = options || {};
+  var profile = options.profile;
+
+  return when.promise(function(resolve, reject) {
+    // jpm -p .. is used
+    if (profile) {
+      if (options.copy) {
+        console.log("Copying provided profile:");
+      } else {
+        console.log("Using provided profile:");
+      }
+
+      // profile name is provided
+      if (isProfileName(profile)) {
+        return convertProfileNameToPath({name: profile}).
+          then(function(path) {
+            console.log("    " + path);
+            resolve(options.copy ? copyProfile(path) : reuseProfile(path));
+          });
+      }
+
+      // profile path is provided
+      console.log("    " + profile);
+      return resolve(options.copy ? copyProfile(profile) :
+                     reuseProfile(profile));
+    }
+
+    // jpm -p .. was not used
+    console.log("Creating a new profile");
+    return resolve(makeProfile());
+  }).
+  then(function(profile) {
+    if (options.verbose) {
+      console.log("Using temporary profile at");
+      console.log("    " + profile.profileDir);
+    }
+    return profile;
+  }).
+  then(function(profile) {
+    return addPrefs(profile, options);
+  }).
+  then(function(profile) {
+    return addExtension(profile, options);
+  }).
+  then(function(profile) {
+    return profile.profileDir;
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jpm.profile.isProfileName" id="apidoc.element.jpm.profile.isProfileName">
+        function <span class="apidocSignatureSpan">jpm.profile.</span>isProfileName
+        <span class="apidocSignatureSpan">(profile)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isProfileName(profile) {
+  if (!profile) {
+    return false;
+  }
+  return !/[\\\/]/.test(profile);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jpm.profile.makeProfile" id="apidoc.element.jpm.profile.makeProfile">
+        function <span class="apidocSignatureSpan">jpm.profile.</span>makeProfile
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function makeProfile() {
+  var profile = new FirefoxProfile();
+
+  // Set default preferences
+  var prefs = getPrefs("firefox");
+  Object.keys(prefs).forEach(function(pref) {
+    profile.setPreference(pref, prefs[pref]);
+  });
+  profile.updatePreferences();
+
+  return when.resolve(profile);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jpm.profile.reuseProfile" id="apidoc.element.jpm.profile.reuseProfile">
+        function <span class="apidocSignatureSpan">jpm.profile.</span>reuseProfile
+        <span class="apidocSignatureSpan">(profile)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function reuseProfile(profile) {
+  return when.resolve(new FirefoxProfile({
+    destinationDirectory: profile
+  }));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.jpm.rdf" id="apidoc.module.jpm.rdf">module jpm.rdf</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.jpm.rdf.createRDF" id="apidoc.element.jpm.rdf.createRDF">
+        function <span class="apidocSignatureSpan">jpm.rdf.</span>createRDF
+        <span class="apidocSignatureSpan">(manifest, needsBootstrapJS)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createRDF(manifest, needsBootstrapJS) {
+  var header = [{
+    name: "RDF",
+    attrs: {
+      "xmlns": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "xmlns:em": "http://www.mozilla.org/2004/em-rdf#"
+    },
+    children: []
+  }];
+  var description = {
+    name: "Description",
+    attrs: {
+      "about": "urn:mozilla:install-manifest"
+    },
+    children: []
+  };
+
+  var icon = manifest.icon || {};
+  if (typeof icon === "string") {
+    icon = {
+      "32": icon
+    };
+  }
+
+  var jetpackMeta = {
+    "em:id": getID(manifest),
+    "em:type": "2",
+    "em:bootstrap": true,
+    "em:unpack": manifest.unpack === true,
+    "em:version": manifest.version || "0.0.0",
+    "em:name": manifest.title || manifest.name || "Untitled",
+    "em:description": manifest.description || undefined,
+    "em:creator": formatAuthor(manifest.author),
+    "em:homepageURL": manifest.homepage || undefined,
+    "em:updateURL": manifest.updateURL || undefined,
+    "em:updateKey": manifest.updateKey || undefined,
+    "em:iconURL": icon["48"] || icon["32"] || undefined,
+    "em:icon64URL": icon["64"] || undefined
+  };
+
+  // these values are used by default so using them
+  // in the install.rdf is not useful
+  if (jetpackMeta["em:iconURL"] === "icon.png") {
+    delete jetpackMeta["em:iconURL"];
+  }
+  if (jetpackMeta["em:icon64URL"] === "icon64.png") {
+    delete jetpackMeta["em:icon64URL"];
+  }
+
+<span class="apidocCodeCommentSpan">  /*
+   * When bootstrap.js is not provided by the addon developer, the default
+   * bootstrap.js is used. With this bootstrap.js, the addon's resource:// URI
+   * registration occurs in resource://gre/modules/commonjs/sdk/addon/bootstrap.js.
+   * If a custom bootstrap.js is provided, the program flow mentioned above may
+   * not occur, so the real icon URLs are unknow.
+   **/
+</span>  if (needsBootstrapJS) {
+    ["em:iconURL", "em:icon64URL"].forEach(function(key) {
+      if (jetpackMeta[key] &amp;&amp; jetpackMeta[key].indexOf("://") === -1) {
+        var domain = realDomain(jetpackMeta["em:id"]);
+        jetpackMeta[key] = "resource://" + domain + "/" + jetpackMeta[key];
+      }
+    });
+  }
+
+  if (manifest.preferences &amp;&amp; !manifest.preferencesURL) {
+    jetpackMeta["em:optionsURL"] = "data:text/xml,&lt;placeholder/&gt;";
+    jetpackMeta["em:optionsType"] = 2;
+  } else if (manifest.preferencesURL) {
+    jetpackMeta["em:optionsURL"] = manifest.preferencesURL;
+    jetpackMeta["em:optionsType"] = 3;
+  }
+
+  if (manifest.permissions &amp;&amp; manifest.permissions.multiprocess !== undefined) {
+    var supportsMultiprocess = manifest.permissions.multiprocess;
+    jetpackMeta["em:multiprocessCompatible"] = supportsMultiprocess;
+  }
+
+  if (manifest.hasEmbeddedWebExtension) {
+    jetpackMeta["em:hasEmbeddedWebExtension"] = true;
+  }
+
+  header[0].children.push(description);
+
+  // clean jetpackMeta
+  description.children.push(cleanMetadata(jetpackMeta));
+
+  if (manifest.developers) {
+    aboutDeveloper(description.children, manifest.developers);
+  }
+
+  if (manifest.translators) {
+    aboutTranslator(description.children, manifest.translators);
+  }
+
+  if (manifest.contributors) {
+    aboutContributor(description.children, manifest.contributors);
+  }
+
+  var engines = Object.keys(manifest.engines || {});
+
+  // If engines defined, use them
+  if (engines.length) {
+    engines.forEach(function(engine) {
+      description.children.push(createApplication(
+        engine, manifest.engines[engine]));
+    });
+  }
+  // Otherwise, assume default Firefox support
+  else {
+    description.children.push(createApplication("Firefox"));
+  }
+
+  if (manifest.locales) {
+    for (var locale in manifest.locales) {
+      var l10n = manifest.locales[locale];
+      var l10nDescription = [];
+
+      var l10nMeta = {
+        "em:locale": locale,
+        "em:name": l10n.title || jetpackMeta["em:name"],
+        "em:description": l10n.description || jetpackMeta["em:description"],
+        "em:creator": jetpackMeta["em:creator"],
+        "em:homepageURL": l10n.homepage || jetpackMeta["em:homepageURL"]
+      };
+
+      // clean l10nMeta
+      l10nDescription.push(cleanMetadata(l10nMeta));
+
+      if (manifest.developers) { ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jpm.rdf.createUpdateRDF" id="apidoc.element.jpm.rdf.createUpdateRDF">
+        function <span class="apidocSignatureSpan">jpm.rdf.</span>createUpdateRDF
+        <span class="apidocSignatureSpan">(manifest)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createUpdateRDF(manifest) {
+  var header = [{
+    name: "RDF",
+    attrs: {
+      "xmlns": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "xmlns:em": "http://www.mozilla.org/2004/em-rdf#"
+    },
+    children: []
+  }];
+  var description = {
+    name: "Description",
+    attrs: {
+      "about": "urn:mozilla:extension:" + getID(manifest)
+    },
+    children: []
+  };
+  var enginesDescription = {
+    name: "Description",
+    children: []
+  };
+  var updateRdfTree = {
+    name: "em:updates",
+    children: [
+      {
+        name: "Seq",
+        children: [
+          {
+            name: "li",
+            children: []
+          }
+        ]
+      }
+    ]
+  };
+
+  var jetpackMeta = {
+    "em:version": manifest.version || "0.0.0"
+  };
+  enginesDescription.children.push(jetpackMeta);
+
+  var engines = Object.keys(manifest.engines || {});
+  // If engines defined, use them
+  if (engines.length) {
+    engines.forEach(function(engine) {
+      enginesDescription.children.push(createApplication(
+        engine, manifest.engines[engine]));
+    });
+  }
+  // Otherwise, assume default Firefox support
+  else {
+    enginesDescription.children.push(createApplication("Firefox"));
+  }
+  //we add the updateLink for each engine
+  enginesDescription.children.forEach(function(descriptionData, index) {
+    if (descriptionData.hasOwnProperty("em:targetApplication")) {
+      enginesDescription.children[index][Object.keys(descriptionData)].
+        Description["em:updateLink"] = manifest.updateLink;
+    }
+  });
+
+  updateRdfTree.children[0].children[0].children.push(enginesDescription);
+  description.children.push(updateRdfTree);
+  header[0].children.push(description);
+
+  var xml = jsontoxml(header, {
+    prettyPrint: true,
+    xmlHeader: true,
+    indent: "  ",
+    escape: true
+  });
+
+  return xml;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  options.fallbacks = fallbacks;
+  if (options.verbose) {
+    console.log("Creating XPI");
+  }
+  return utils.createZip(options);
+})
+.then(function() {
+  return utils.<span class="apidocCodeKeywordSpan">createUpdateRDF</span>(options, updateRdfPath);
+})
+.then(function() {
+  if (options.verbose) {
+    console.log("Created XPI at " + xpiPath);
+  }
+  return xpiPath;
+});
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.jpm.sign" id="apidoc.module.jpm.sign">module jpm.sign</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.jpm.sign.sign" id="apidoc.element.jpm.sign.sign">
+        function <span class="apidocSignatureSpan">jpm.</span>sign
+        <span class="apidocSignatureSpan">(options, config)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function sign(options, config) {
+  config = _.assign({
+    createXPI: xpi,
+    signAddon: DefaultAddonSigner,
+    getXpiInfoForSigning: getXpiInfoForSigning,
+  }, config);
+
+  options = _.assign({
+    addonDir: process.cwd(),
+    apiUrlPrefix: AMO_API_PREFIX,
+  }, options);
+
+  return when.promise(function(resolve, reject) {
+    var missingOptions = [];
+    var toCheck = [
+      {value: options.apiKey, flag: "--api-key"},
+      {value: options.apiSecret, flag: "--api-secret"},
+    ];
+    toCheck.forEach(function(opt) {
+      if (!opt.value) {
+        missingOptions.push(opt.flag);
+      }
+    });
+    if (missingOptions.length) {
+      console.error(); // eslint-disable-line no-console
+      missingOptions.forEach(function(flag) {
+        console.error("  error: missing required option `%s'", flag); // eslint-disable-line no-console
+      });
+      console.error(); // eslint-disable-line no-console
+      return reject();
+    }
+
+    resolve(config.getXpiInfoForSigning({
+      addonDir: options.addonDir,
+      xpiPath: options.xpi,
+    }));
+
+  }).then(function(xpiInfo) {
+    if (options.xpi) {
+      logger.log("Signing XPI: " + options.xpi);
+      return _.assign(xpiInfo, {xpiPath: options.xpi});
+    } else {
+      var createTmpDir = nodefn.lift(tmp.dir);
+      return createTmpDir({
+        prefix: "tmp-unsigned-xpi-",
+        unsafeCleanup: true,
+      })
+        .then(function(tmpResult) {
+          var tmpDir = tmpResult[0];
+          var removeTmpDir = tmpResult[1];
+          var xpiOptions = _.assign({}, options, {
+            xpiPath: tmpDir,
+          });
+
+          return config.createXPI(xpiInfo.manifest, xpiOptions)
+            .then(function(xpiPath) {
+              logger.log("Created XPI for signing: " + xpiPath);
+              return _.assign(xpiInfo, {
+                xpiPath: xpiPath,
+                cleanUp: removeTmpDir,
+              });
+            });
+        });
+    }
+  }).then(function(xpiInfo) {
+
+    if (!xpiInfo.id || !xpiInfo.version) {
+      throw new Error(
+          "Could not detect this XPI's ID and/or version\n\n" +
+          "Troubleshooting:\n" +
+          "- Are you in the right directory? If not, try --addon-dir\n" +
+          "- Are you really in a directory of SDK add-on source? If not, try " +
+             "signing with the --xpi option\n" +
+          "- Is your manifest ID valid? See " +
+          "https://developer.mozilla.org/en-US/Add-ons/Install_Manifests#id\n");
+    }
+
+    return config.signAddon({
+      xpiPath: xpiInfo.xpiPath,
+      id: xpiInfo.id,
+      version: xpiInfo.version,
+      apiKey: options.apiKey,
+      apiSecret: options.apiSecret,
+      apiUrlPrefix: options.apiUrlPrefix,
+      apiProxy: options.apiProxy || undefined,
+      verbose: options.verbose,
+      timeout: options.timeout || undefined
+    }).then(function(result) {
+      if (typeof xpiInfo.cleanUp !== "undefined") {
+        logger.debug("cleaning up XPI temp directory");
+        xpiInfo.cleanUp();
+      }
+      return result;
+    });
+
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jpm.sign.getXpiInfoForSigning" id="apidoc.element.jpm.sign.getXpiInfoForSigning">
+        function <span class="apidocSignatureSpan">jpm.sign.</span>getXpiInfoForSigning
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getXpiInfoForSigning(options) {
+  options = _.assign({
+    addonDir: process.cwd(),
+    xpiPath: null,
+  }, options);
+
+  if (!options.xpiPath) {
+    return utils.getManifest({addonDir: options.addonDir})
+      .then(function(manifest) {
+        return utils.getXpiInfoFromManifest(manifest);
+      });
+  } else {
+    return utils.getXpiInfo(options.xpiPath);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    missingOptions.forEach(function(flag) {
+      console.error("  error: missing required option `%s'", flag); // eslint-disable-line no-console
+    });
+    console.error(); // eslint-disable-line no-console
+    return reject();
+  }
+
+  resolve(config.<span class="apidocCodeKeywordSpan">getXpiInfoForSigning</span>({
+    addonDir: options.addonDir,
+    xpiPath: options.xpi,
+  }));
+
+}).then(function(xpiInfo) {
+  if (options.xpi) {
+    logger.log("Signing XPI: " + options.xpi);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jpm.sign.signCmd" id="apidoc.element.jpm.sign.signCmd">
+        function <span class="apidocSignatureSpan">jpm.sign.</span>signCmd
+        <span class="apidocSignatureSpan">(program, options, config)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function signCmd(program, options, config) {
+  config = _.assign({
+    systemProcess: process,
+  }, config);
+  return when.promise(function(resolve, reject) {
+    resolve(cmd.validateProgram(program));
+  }).then(function() {
+    return sign(_.assign({}, options, program), config);
+  }).then(function(result) {
+    logger.log(result.success ? "SUCCESS" : "FAIL");
+    config.systemProcess.exit(result.success ? 0 : 1);
+  }).catch(function(err) {
+    logger.error("FAIL");
+    if (err) {
+      console.error(err.stack); // eslint-disable-line no-console
+    }
+    config.systemProcess.exit(1);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.jpm.utils" id="apidoc.module.jpm.utils">module jpm.utils</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.jpm.utils.extractXPI" id="apidoc.element.jpm.utils.extractXPI">
+        function <span class="apidocSignatureSpan">jpm.utils.</span>extractXPI
+        <span class="apidocSignatureSpan">(xpiPath)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function extractXPI(xpiPath) {
+  return when.promise(function(resolve, reject) {
+    if (!xpiPath) {
+      reject(new Error("xpiPath cannot be empty"));
+    }
+    var stat = fs.statSync(xpiPath);
+    if (!stat.isFile()) {
+      reject(new Error("expected an XPI file, got: " + xpiPath));
+    }
+    tmp.dir(function(err, tmpPath, removeTmpDir) {
+      function cleanUpAndReject(err) {
+        removeTmpDir();
+        reject(err);
+      }
+      if (err) {
+        return cleanUpAndReject(err);
+      }
+
+      var unzipper = new DecompressZip(xpiPath);
+      unzipper.on("extract", function(_log) {
+        resolve({
+          path: tmpPath,
+          remove: removeTmpDir,
+        });
+      });
+      unzipper.on("error", cleanUpAndReject);
+      unzipper.extract({
+        path: tmpPath,
+      });
+    }, {
+      prefix: "tmp-extracted-xpi-",
+      // This allows us to remove a non-empty tmp dir.
+      unsafeCleanup: true,
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jpm.utils.getManifest" id="apidoc.element.jpm.utils.getManifest">
+        function <span class="apidocSignatureSpan">jpm.utils.</span>getManifest
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getManifest(options) {
+  options = _.assign({
+    addonDir: process.cwd(),
+    xpiPath: null
+  }, options);
+  return when.promise(function(resolve, reject) {
+    if (options.xpiPath) {
+      return getXpiInfo(options.xpiPath)
+        .then(function(xpiInfo) {
+          resolve(xpiInfo.manifest);
+        })
+        .catch(reject);
+    } else {
+      var json = path.join(options.addonDir, "package.json");
+      var manifest = {};
+      try {
+        manifest = require(json);
+      } catch (e) {} // eslint-disable-line no-empty
+
+      return resolve(manifest);
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var utils = require("../lib/utils");
+var console = utils.console;
+
+var DEBUG_VALUES = ["binary", "verbose", "binaryArgs", "overload", "profile"];
+
+function prepare(mode, program, actionCallback) {
+return function(commanderOptions) {
+  return utils.<span class="apidocCodeKeywordSpan">getManifest</span>({
+    addonDir: program.addonDir
+  }).then(function(manifest) {
+    validateProgram(program);
+    console.log("Starting jpm " + mode + " on " +
+                (manifest.title || manifest.name));
+    return actionCallback(manifest, commanderOptions);
+  });
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jpm.utils.getXpiInfo" id="apidoc.element.jpm.utils.getXpiInfo">
+        function <span class="apidocSignatureSpan">jpm.utils.</span>getXpiInfo
+        <span class="apidocSignatureSpan">(xpiPath)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getXpiInfo(xpiPath) {
+  return extractXPI(xpiPath)
+    .then(function(tmpXPI) {
+      var getInfo;
+      var packageFile = path.join(tmpXPI.path, "package.json");
+      var installRdfFile = path.join(tmpXPI.path, "install.rdf");
+
+      if (fileExists(packageFile)) {
+        getInfo = getXpiInfoFromManifest(require(packageFile));
+      } else if (fileExists(installRdfFile)) {
+        getInfo = nodefn.call(fs.readFile, installRdfFile)
+          .then(function(data) {
+            return getXpiInfoFromInstallRdf(data);
+          });
+      } else {
+        getInfo = when.reject(
+          new Error("Cannot get info: no manifest found in this XPI"));
+      }
+
+      return getInfo
+        .catch(function(err) {
+          try {
+            tmpXPI.remove();
+          } catch (e) {} // eslint-disable-line no-empty
+          throw err;
+        })
+        .then(function(info) {
+          tmpXPI.remove();
+          return info;
+        });
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+if (!options.xpiPath) {
+  return utils.getManifest({addonDir: options.addonDir})
+    .then(function(manifest) {
+      return utils.getXpiInfoFromManifest(manifest);
+    });
+} else {
+  return utils.<span class="apidocCodeKeywordSpan">getXpiInfo</span>(options.xpiPath);
+}
+}
+exports.getXpiInfoForSigning = getXpiInfoForSigning;
+
+function sign(options, config) {
+config = _.assign({
+  createXPI: xpi,
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jpm.utils.getXpiInfoFromInstallRdf" id="apidoc.element.jpm.utils.getXpiInfoFromInstallRdf">
+        function <span class="apidocSignatureSpan">jpm.utils.</span>getXpiInfoFromInstallRdf
+        <span class="apidocSignatureSpan">(installRdf)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getXpiInfoFromInstallRdf(installRdf) {
+  var parser = new xml2js.Parser();
+  return nodefn.call(parser.parseString, installRdf)
+    .catch(function(parseError) {
+      parseError.message = "install.rdf: " + parseError.message;
+      throw parseError;
+    })
+    .then(function(result) {
+      var info = {
+        manifest: null,
+      };
+      // RDF is one of those sick and twisted XML variants.
+      var root = result.RDF || result["RDF:RDF"];
+
+      if (!root) {
+        throw new Error("Could not find root RDF element in install.rdf");
+      }
+      var descriptions = root.Description || root["RDF:Description"];
+      if (!descriptions) {
+        throw new Error("Could not find descriptions in install.rdf");
+      }
+
+      var foundManifest = false;
+      descriptions.forEach(function(obj) {
+        var about = obj.$.about || obj.$["RDF:about"];
+        if (about !== "urn:mozilla:install-manifest") {
+          return;
+        }
+        foundManifest = true;
+
+        // Check for values in properties first then fall back to attributes.
+        // Note that xml2js puts attributes a magical `$`.
+        info.id = obj["em:id"] ? obj["em:id"][0] : null;
+        if (!info.id) {
+          info.id = obj.$["em:id"];
+        }
+        info.version = obj["em:version"] ? obj["em:version"][0] : null;
+        if (!info.version) {
+          info.version = obj.$["em:version"];
+        }
+      });
+
+      if (!foundManifest) {
+        throw new Error(
+            "Could not find urn:mozilla:install-manifest Description in " +
+            "install.rdf");
+      }
+      if (!info.id) {
+        throw new Error("ID was empty in install.rdf");
+      }
+      if (!info.version) {
+        throw new Error("Version was empty in install.rdf");
+      }
+
+      return info;
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jpm.utils.getXpiInfoFromManifest" id="apidoc.element.jpm.utils.getXpiInfoFromManifest">
+        function <span class="apidocSignatureSpan">jpm.utils.</span>getXpiInfoFromManifest
+        <span class="apidocSignatureSpan">(manifest)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getXpiInfoFromManifest(manifest) {
+  return when({
+    manifest: manifest,
+    id: getID(manifest),
+    version: manifest.version,
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    addonDir: process.cwd(),
+    xpiPath: null,
+  }, options);
+
+  if (!options.xpiPath) {
+    return utils.getManifest({addonDir: options.addonDir})
+      .then(function(manifest) {
+        return utils.<span class="apidocCodeKeywordSpan">getXpiInfoFromManifest</span>(manifest);
+      });
+  } else {
+    return utils.getXpiInfo(options.xpiPath);
+  }
+}
+exports.getXpiInfoForSigning = getXpiInfoForSigning;
+...</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
